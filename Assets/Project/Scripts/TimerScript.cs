@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class Example : MonoBehaviour
+public class TimerScript : MonoBehaviour
 {
 
     public float timeRemaining = 120; // Set time in seconds (2 minutes)
