@@ -28,7 +28,7 @@ public class GrabObject : MonoBehaviour
         Debug.Log($"{gameObject.name} was grabbed by {args.interactorObject.transform.name}");
         if (endScreen != null && userCamera != null)
         {
-            PositionEndScreen();
+            // PositionEndScreen();
             endScreen.SetActive(true);
         }
     }
