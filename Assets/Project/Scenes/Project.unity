@@ -3039,6 +3039,7 @@ MonoBehaviour:
   endScreen: {fileID: 714324061}
   distanceFromUser: 2
   verticalOffset: 0.5
+  sessionManager: {fileID: 968706514}
 --- !u!4 &567041747 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6fcf8edbd4e6bbd4faa2c67c4f614995, type: 3}
@@ -4345,7 +4346,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &968706514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4358,6 +4359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c585b28269e78a0429ca2fbf3053875f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timerScript: {fileID: 1962725809}
 --- !u!4 &968706515
 Transform:
   m_ObjectHideFlags: 0

@@ -11,6 +11,8 @@ public class GrabObject : MonoBehaviour
     private XRGrabInteractable grabInteractable;
     private Transform userCamera;
 
+    public SessionManager sessionManager;
+
     void Awake()
     {
         grabInteractable = GetComponent<XRGrabInteractable>();
@@ -26,19 +28,15 @@ public class GrabObject : MonoBehaviour
     private void OnGrabbed(SelectEnterEventArgs args)
     {
         Debug.Log($"{gameObject.name} was grabbed by {args.interactorObject.transform.name}");
+
+        if (sessionManager != null)
+        {
+            sessionManager.StopRecordingMovement();
+        }
+
         if (endScreen != null && userCamera != null)
         {
-            // PositionEndScreen();
             endScreen.SetActive(true);
         }
-    }
-
-    private void PositionEndScreen()
-    {
-        Vector3 screenPosition = userCamera.position + userCamera.forward * distanceFromUser;
-        screenPosition.y += verticalOffset;
-
-        endScreen.transform.position = screenPosition;
-        endScreen.transform.rotation = Quaternion.LookRotation(userCamera.forward, Vector3.up);
     }
 }

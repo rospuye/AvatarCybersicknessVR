@@ -5,50 +5,54 @@ using UnityEngine;
 public class SessionManager : MonoBehaviour
 {
     private string filePath;
-    private DateTime sessionStartTime;
-    private DateTime sessionEndTime;
+    private Vector3 previousPosition;
+    private bool isRecording = true;
+    public TimerScript timerScript;
 
     private void Start()
     {
-        string fileName = "camera_data.csv";
+        string timestamp = DateTime.Now.ToString("MM-dd-yy_H-mm-ss");
+        string fileName = $"session_data{timestamp}.csv";
         filePath = Path.Combine(Application.persistentDataPath, fileName);
-        
-        sessionStartTime = DateTime.Now;
-        Debug.Log($"Session started at: {sessionStartTime}");
 
-        File.AppendAllText(filePath, "CameraPosition\n");
-        InvokeRepeating("SaveCameraData", 0f, 1f);
+        File.AppendAllText(filePath, "MOVEMENT_DATA\n");
+        File.AppendAllText(filePath, "Timestamp,MovementDeltaX,MovementDeltaY,MovementDeltaZ,TotalMovementDelta\n");
+        previousPosition = Camera.main.transform.position;
+        InvokeRepeating("SaveMovementData", 0f, 1f);
     }
 
-    //private void SaveSessionData()
-    //{
-    //    string csvLine = $"Mimi-曹逸辰, {sessionStartTime},{sessionEndTime}\n";
-        
-    //    // if the file doesnt exist add header for csv
-    //    if (!File.Exists(filePath))
-    //    {
-    //        string header = "Name,Session Start Time,Session End Time\n";
-    //        File.WriteAllText(filePath, header);
-    //    }
-        
-    //    // Append the data to the CSV file
-    //    File.AppendAllText(filePath, csvLine);
-    //    Debug.Log($"Session data saved to: {filePath}");
-    //}
-
-    private void SaveCameraData()
+    private void SaveMovementData()
     {
-        Vector3 cameraPosition = Camera.main.transform.position;
+        if (!isRecording) return;
+
+        Vector3 currentPosition = Camera.main.transform.position;
+        Vector3 movementDelta = currentPosition - previousPosition;
+        previousPosition = currentPosition;
+        float totalMovementDelta = movementDelta.magnitude;
+
         string timestamp = DateTime.Now.ToString();
-        string csvPosition = $"{timestamp},{cameraPosition.x},{cameraPosition.y},{cameraPosition.z}\n";
-        File.AppendAllText(filePath, csvPosition);
+        string csvData = $"{timestamp},{movementDelta.x},{movementDelta.y},{movementDelta.z},{totalMovementDelta}\n";
+        File.AppendAllText(filePath, csvData);
     }
 
-    private void OnApplicationQuit()
+    public void StopRecordingMovement()
     {
-        sessionEndTime = DateTime.Now;
-        Debug.Log($"Session ended at: {sessionEndTime}");
+        isRecording = false;
+        Debug.Log("Movement recording stopped.");
 
-        //SaveSessionData();
+        if (timerScript != null)
+        {
+            File.AppendAllText(filePath, "TIMER_DATA\n");
+
+            float timeLeft = timerScript.timeRemaining;
+            string timestamp = DateTime.Now.ToString();
+            string remainingTimeData = $"TimerStopped,{timestamp},TimeLeft:{timeLeft}s\n";
+            File.AppendAllText(filePath, remainingTimeData);
+        }
+        else
+        {
+            Debug.LogWarning("TimerScript reference not set in SessionManager.");
+        }
     }
+
 }
