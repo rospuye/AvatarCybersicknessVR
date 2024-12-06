@@ -4,6 +4,7 @@ using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class GrabObject : MonoBehaviour
 {
+    public GameObject endScreen;
     private XRGrabInteractable grabInteractable;
 
     void Awake()
@@ -20,5 +21,9 @@ public class GrabObject : MonoBehaviour
     private void OnGrabbed(SelectEnterEventArgs args)
     {
         Debug.Log($"{gameObject.name} was grabbed by {args.interactorObject.transform.name}");
+        if (endScreen != null)
+        {
+            endScreen.SetActive(true); // Activate the Canvas GameObject
+        }
     }
 }

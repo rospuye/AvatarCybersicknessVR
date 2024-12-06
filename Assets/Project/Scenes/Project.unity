@@ -3384,6 +3384,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87e84476b993801479c296e018f31120, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endScreen: {fileID: 483167233}
 --- !u!4 &567041747 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6fcf8edbd4e6bbd4faa2c67c4f614995, type: 3}
@@ -13761,6 +13762,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 657184242539281767, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1820897918385990095, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
       propertyPath: m_RequestedTrackingOriginMode
       value: 2
@@ -13832,6 +13837,18 @@ PrefabInstance:
     - target: {fileID: 2945826935290517874, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
       propertyPath: m_RayOriginTransform
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2945826935290517886, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5153517498714181929, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
+      propertyPath: m_SmoothTurnEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5427215433783172354, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
+      propertyPath: m_SmoothMotionEnabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
