@@ -8,4 +8,10 @@ public class MenuController : MonoBehaviour
         SceneManager.LoadScene("Project");
 
     }
+
+    public void TestBttn()
+    {
+        SceneManager.LoadScene("TrainingScenario");
+
+    }
 }
