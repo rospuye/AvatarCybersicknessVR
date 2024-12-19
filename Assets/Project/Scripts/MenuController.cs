@@ -112,8 +112,8 @@ public class MenuController : MonoBehaviour
     {
         // TODO: write finishing stuff to CSV file
         Debug.Log("Quitting experiment.");
-        Application.Quit();
         PlayerPrefs.DeleteAll();
+        Application.Quit();
 
         #if UNITY_EDITOR
                 UnityEditor.EditorApplication.isPlaying = false;

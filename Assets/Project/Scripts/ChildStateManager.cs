@@ -9,7 +9,9 @@ public class ChildStateManager : MonoBehaviour
     private void Start()
     {
         // If child1 is active on start, store that state
-        if (child1.activeSelf)
+        int savedValue = PlayerPrefs.GetInt("ActiveChild", 0);
+        Debug.Log("playerprefs"+savedValue);
+        if (savedValue == 0 || savedValue == 2 )
         {
             PlayerPrefs.SetInt("ActiveChild", 1); // Store that child1 was active
         }
@@ -26,7 +28,7 @@ public class ChildStateManager : MonoBehaviour
         PlayerPrefs.SetInt("ActiveChild", 2);
 
         // Reload the scene
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("SeatedScene");
     }
 
     private void OnEnable()
