@@ -11,6 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Project/Scenes/Project.unity
     guid: 437baa593d7156f4698132138cee4df5
+  - enabled: 1
+    path: Assets/Project/Scenes/TrainingScenario.unity
+    guid: a07fa6878fe2eae47b04d1e9bacfc256
+  - enabled: 1
+    path: Assets/Project/Scenes/IntermediateMenu.unity
+    guid: af7e9a0c3af8ffa4183732026fb8f621
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: fbb6a00aa6a72ee48a5e93a0b8903c86, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
