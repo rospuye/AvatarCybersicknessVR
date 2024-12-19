@@ -44,6 +44,12 @@ public class MenuController : MonoBehaviour
         SceneManager.LoadScene("Project");
     }
 
+    public void SeatedStartBttn()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        SceneManager.LoadScene("SeatedScene");
+    }
+
     public void TestBttn()
     {
         SceneManager.LoadScene("TrainingScenario");
@@ -100,5 +106,16 @@ public class MenuController : MonoBehaviour
 
             SceneManager.sceneLoaded -= OnSceneLoaded;
         }
+    }
+
+    public void QuitGame()
+    {
+        // TODO: write finishing stuff to CSV file
+        Debug.Log("Quitting experiment.");
+        Application.Quit();
+
+        #if UNITY_EDITOR
+                UnityEditor.EditorApplication.isPlaying = false;
+        #endif
     }
 }
