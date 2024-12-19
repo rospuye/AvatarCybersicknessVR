@@ -19,6 +19,16 @@ public class MenuController : MonoBehaviour
 
     private static bool? lastUsedLocomotion1 = null;
 
+    [SerializeField]
+    private GameObject leftHand;
+    
+    [SerializeField]
+    private GameObject rightHand;
+
+    [SerializeField]
+    private GameObject characterModule;
+    private bool usedAvatar = false;
+
     void Start()
     {
         // on the shelf, behind the books
@@ -72,6 +82,17 @@ public class MenuController : MonoBehaviour
                         selectedTransform = locomotion2;
                         lastUsedLocomotion1 = false;
                     }
+
+                    if (UnityEngine.Random.value < 0.5f){
+                        usedAvatar = true;
+                        characterModule.SetActive(true);
+                        leftHand.SetActive(false);
+                        rightHand.SetActive(false);
+                    }else{
+                        characterModule.SetActive(false);
+                        leftHand.SetActive(true);
+                        rightHand.SetActive(true);
+                    }
                 }
                 else
                 {
@@ -85,6 +106,15 @@ public class MenuController : MonoBehaviour
                     {
                         selectedTransform = locomotion1;
                         lastUsedLocomotion1 = true;
+                    }
+                    if (usedAvatar){
+                        characterModule.SetActive(false);
+                        leftHand.SetActive(true);
+                        rightHand.SetActive(true);
+                    }else{
+                        characterModule.SetActive(true);
+                        leftHand.SetActive(false);
+                        rightHand.SetActive(false);
                     }
                 }
 
