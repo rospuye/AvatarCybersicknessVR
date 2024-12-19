@@ -1,6 +1,5 @@
 using System.IO;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 
 public class InputFieldHandler : MonoBehaviour
@@ -32,7 +31,7 @@ public class InputFieldHandler : MonoBehaviour
         }
 
         string filePath = Path.Combine(Application.persistentDataPath, fileName);
-        string csvContent = "Header1,Header2,Header3\nValue1,Value2,Value3";
+        string csvContent = "";
         File.WriteAllText(filePath, csvContent);
 
         Debug.Log("CSV file created: " + filePath);
