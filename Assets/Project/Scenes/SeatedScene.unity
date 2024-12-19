@@ -393,47 +393,47 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 128031153}
+    m_TransformParent: {fileID: 573884404}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: cd77716ba2f21c741b92fbef92ba3483, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.00004943988
+      value: 0.05072657
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cd77716ba2f21c741b92fbef92ba3483, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.00004069397
+      value: 0.05072657
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cd77716ba2f21c741b92fbef92ba3483, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.00005636284
+      value: 0.050726566
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cd77716ba2f21c741b92fbef92ba3483, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.001519
+      value: -4.0161963
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cd77716ba2f21c741b92fbef92ba3483, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.00049
+      value: 6.5179
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cd77716ba2f21c741b92fbef92ba3483, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.0004499
+      value: 17.93239
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cd77716ba2f21c741b92fbef92ba3483, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cd77716ba2f21c741b92fbef92ba3483, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.7071068
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cd77716ba2f21c741b92fbef92ba3483, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cd77716ba2f21c741b92fbef92ba3483, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.7071068
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cd77716ba2f21c741b92fbef92ba3483, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -490,10 +490,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87e84476b993801479c296e018f31120, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endScreen: {fileID: 0}
+  endScreen: {fileID: 1127964357}
   distanceFromUser: 2
   verticalOffset: 0.5
-  sessionManager: {fileID: 0}
+  sessionManager: {fileID: 1843616200}
 --- !u!114 &90266919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1155,8 +1155,8 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 985346746804571758, guid: aa59a23fec914b04f88d5384f8ebcf76, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1281796414}
-    - targetCorrespondingSourceObject: {fileID: 2989647069802432919, guid: aa59a23fec914b04f88d5384f8ebcf76, type: 3}
-      insertIndex: -1
+    - targetCorrespondingSourceObject: {fileID: 3348557045637276997, guid: aa59a23fec914b04f88d5384f8ebcf76, type: 3}
+      insertIndex: 2
       addedObject: {fileID: 90266916}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 497497168101233876, guid: aa59a23fec914b04f88d5384f8ebcf76, type: 3}
@@ -1166,11 +1166,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: aa59a23fec914b04f88d5384f8ebcf76, type: 3}
---- !u!4 &128031153 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2989647069802432919, guid: aa59a23fec914b04f88d5384f8ebcf76, type: 3}
-  m_PrefabInstance: {fileID: 128031152}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &128031154 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2465312357848240941, guid: aa59a23fec914b04f88d5384f8ebcf76, type: 3}
@@ -2083,6 +2078,11 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!4 &573884404 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3348557045637276997, guid: aa59a23fec914b04f88d5384f8ebcf76, type: 3}
+  m_PrefabInstance: {fileID: 128031152}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &587788723
 GameObject:
   m_ObjectHideFlags: 0
@@ -3935,7 +3935,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1127964358
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3944,7 +3944,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1127964357}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.393}
+  m_LocalPosition: {x: 0, y: 0, z: 0.377}
   m_LocalScale: {x: 0.0002, y: 0.0002, z: 0.0002}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -3953,7 +3953,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.117, y: 0.556}
+  m_AnchoredPosition: {x: -0.012, y: -0.043}
   m_SizeDelta: {x: 1000, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1127964359
@@ -4245,7 +4245,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: GO TO TRIAL 4
+  m_text: NEXT TRIAL
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4798,18 +4798,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1834638934}
-        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
-        m_MethodName: SeatedStartBttn
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 1317310334}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -4833,6 +4821,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1834638934}
+        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
+        m_MethodName: SeatedStartBttn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1410161483
 MonoBehaviour:
@@ -5707,7 +5707,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: GO TO TRIAL 4
+  m_text: NEXT TRIAL
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
