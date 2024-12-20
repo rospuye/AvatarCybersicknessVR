@@ -10,14 +10,18 @@ public class ChildStateManager : MonoBehaviour
     {
         // If child1 is active on start, store that state
         int savedValue = PlayerPrefs.GetInt("ActiveChild", 0);
-        Debug.Log("playerprefs"+savedValue);
+        Debug.Log("savedValue: "+savedValue);
         if (savedValue == 0 || savedValue == 2 )
         {
             PlayerPrefs.SetInt("ActiveChild", 1); // Store that child1 was active
+            child1.SetActive(true);
+            child2.SetActive(false);
         }
         else
         {
             PlayerPrefs.SetInt("ActiveChild", 2); // Otherwise, child2 is active
+            child1.SetActive(false);
+            child2.SetActive(true);
         }
     }
 
@@ -25,26 +29,26 @@ public class ChildStateManager : MonoBehaviour
     public void OnChild1Clicked()
     {
         // Store that child1 is clicked and should become inactive
-        PlayerPrefs.SetInt("ActiveChild", 2);
+        PlayerPrefs.SetInt("ActiveChild", 1);
 
         // Reload the scene
-        SceneManager.LoadScene("SeatedScene");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     private void OnEnable()
     {
         // After the scene reloads, check the saved active child
-        int activeChild = PlayerPrefs.GetInt("ActiveChild", 2); // Default to child2
+        // int activeChild = PlayerPrefs.GetInt("ActiveChild", 0); // Default to child2
 
-        if (activeChild == 1)
-        {
-            child1.SetActive(true);
-            child2.SetActive(false);
-        }
-        else
-        {
-            child1.SetActive(false);
-            child2.SetActive(true);
-        }
+        // if (activeChild == 1)
+        // {
+        //     child1.SetActive(true);
+        //     child2.SetActive(false);
+        // }
+        // else
+        // {
+        //     child1.SetActive(false);
+        //     child2.SetActive(true);
+        // }
     }
 }

@@ -46,6 +46,42 @@ public class MenuController : MonoBehaviour
             Rotation = Quaternion.Euler(45, 0, 0),
             Scale = new Vector3(0.05f, 0.05f, 0.05f)
         };
+
+        if (PlayerPrefs.GetInt("UseAvatar",0) == 1){
+            Debug.Log("1,Avatar");
+            characterModule.SetActive(true);
+            leftHand.SetActive(false);
+            rightHand.SetActive(false);
+            PlayerPrefs.SetInt("UseAvatar",0);
+        }else{
+            Debug.Log("2.Hands");
+            characterModule.SetActive(false);
+            leftHand.SetActive(true);
+            rightHand.SetActive(true);
+            PlayerPrefs.SetInt("UseAvatar",1);
+        }
+
+        GameObject goldenKey = GameObject.Find("goldenKey");
+        Debug.Log($"goldenKey {goldenKey}");
+        if (goldenKey != null){
+            TransformData selectedTransform;
+            if (PlayerPrefs.GetInt("KeyLocation",0) == 0){
+                selectedTransform = locomotion1;
+                // lastUsedLocomotion1 = true;
+                PlayerPrefs.SetInt("KeyLocation",1);
+            }else{
+                selectedTransform = locomotion2;
+                PlayerPrefs.SetInt("KeyLocation",0);
+                // lastUsedLocomotion1 = true;
+            }
+
+            goldenKey.transform.position = selectedTransform.Position;
+            goldenKey.transform.rotation = selectedTransform.Rotation;
+            goldenKey.transform.localScale = selectedTransform.Scale;
+        }else{
+            Debug.LogWarning("goldenKey not found in the scene!");
+        }
+
     }
 
     public void StartBttn()
@@ -67,72 +103,81 @@ public class MenuController : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        Debug.Log($"scene.name {scene.name}");
         if (scene.name == "Project")
         {
-            GameObject goldenKey = GameObject.Find("goldenKey");
-            if (goldenKey != null)
-            {
-                TransformData selectedTransform;
+            // GameObject goldenKey = GameObject.Find("goldenKey");
+            // Debug.Log($"goldenKey {goldenKey}");
+            // if (goldenKey != null)
+            // {
+            //     TransformData selectedTransform;
 
-                // decide which locomotion data to use
-                if (lastUsedLocomotion1 == null)
-                {
-                    // first time, pick randomly
-                    if (UnityEngine.Random.value < 0.5f)
-                    {
-                        selectedTransform = locomotion1;
-                        lastUsedLocomotion1 = true;
-                    }
-                    else
-                    {
-                        selectedTransform = locomotion2;
-                        lastUsedLocomotion1 = false;
-                    }
+            //     Debug.Log($"lastUsedLocomotion1 {lastUsedLocomotion1}");
+            //     // decide which locomotion data to use
+            //     if (lastUsedLocomotion1 == null)
+            //     {
+            //         // first time, pick randomly
+            //         if (UnityEngine.Random.value < 0.5f)
+            //         {
+            //             PlayerPrefs.SetInt("KeyLocation",0);
+            //         }
+            //         else
+            //         {
+            //             PlayerPrefs.SetInt("KeyLocation",1);
+            //             selectedTransform = locomotion2;
+            //             lastUsedLocomotion1 = false;
+            //         }
 
-                    if (UnityEngine.Random.value < 0.5f){
-                        usedAvatar = true;
-                        characterModule.SetActive(true);
-                        leftHand.SetActive(false);
-                        rightHand.SetActive(false);
-                    }else{
-                        characterModule.SetActive(false);
-                        leftHand.SetActive(true);
-                        rightHand.SetActive(true);
-                    }
-                }
-                else
-                {
-                    // alternate between the two
-                    if (lastUsedLocomotion1 == true)
-                    {
-                        selectedTransform = locomotion2;
-                        lastUsedLocomotion1 = false;
-                    }
-                    else
-                    {
-                        selectedTransform = locomotion1;
-                        lastUsedLocomotion1 = true;
-                    }
-                    if (usedAvatar){
-                        characterModule.SetActive(false);
-                        leftHand.SetActive(true);
-                        rightHand.SetActive(true);
-                    }else{
-                        characterModule.SetActive(true);
-                        leftHand.SetActive(false);
-                        rightHand.SetActive(false);
-                    }
-                }
+            //         if (UnityEngine.Random.value < 0.5f){
+            //             PlayerPrefs.SetInt("UseAvatar",1);
+            //             // Debug.Log("1.Avatar");
+            //             // usedAvatar = true;
+            //             // characterModule.SetActive(true);
+            //             // leftHand.SetActive(false);
+            //             // rightHand.SetActive(false);
+            //         }else{
+            //             PlayerPrefs.SetInt("UseAvatar",0);
+            //             // Debug.Log("1.Hands");
+            //             // characterModule.SetActive(false);
+            //             // leftHand.SetActive(true);
+            //             // rightHand.SetActive(true);
+            //         }
+            //     }
+            //     else
+            //     {
+            //         // alternate between the two
+            //         if (lastUsedLocomotion1 == true)
+            //         {
+            //             selectedTransform = locomotion2;
+            //             lastUsedLocomotion1 = false;
+            //         }
+            //         else
+            //         {
+            //             selectedTransform = locomotion1;
+            //             lastUsedLocomotion1 = true;
+            //         }
+            //         if (PlayerPrefs.GetInt("UseAvatar",0) == 1){
+            //             Debug.Log("2.Hands");
+            //             characterModule.SetActive(false);
+            //             leftHand.SetActive(true);
+            //             rightHand.SetActive(true);
+            //         }else{
+            //             Debug.Log("2.Avatar");
+            //             characterModule.SetActive(true);
+            //             leftHand.SetActive(false);
+            //             rightHand.SetActive(false);
+            //         }
+            //     }
 
-                // apply the selected transform to the goldenKey
-                goldenKey.transform.position = selectedTransform.Position;
-                goldenKey.transform.rotation = selectedTransform.Rotation;
-                goldenKey.transform.localScale = selectedTransform.Scale;
-            }
-            else
-            {
-                Debug.LogWarning("goldenKey not found in the scene!");
-            }
+            //     // apply the selected transform to the goldenKey
+            //     goldenKey.transform.position = selectedTransform.Position;
+            //     goldenKey.transform.rotation = selectedTransform.Rotation;
+            //     goldenKey.transform.localScale = selectedTransform.Scale;
+            // }
+            // else
+            // {
+            //     Debug.LogWarning("goldenKey not found in the scene!");
+            // }
 
             SceneManager.sceneLoaded -= OnSceneLoaded;
         }
@@ -143,6 +188,8 @@ public class MenuController : MonoBehaviour
         // TODO: write finishing stuff to CSV file
         Debug.Log("Quitting experiment.");
         PlayerPrefs.DeleteAll();
+        Debug.Log(PlayerPrefs.GetInt("UseAvatar",-1));
+        Debug.Log(PlayerPrefs.GetInt("KeyLocation",-1));
         Application.Quit();
 
         #if UNITY_EDITOR
