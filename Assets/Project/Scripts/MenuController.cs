@@ -50,8 +50,8 @@ public class MenuController : MonoBehaviour
             Rotation = Quaternion.Euler(45, 0, 0),
             Scale = new Vector3(0.05f, 0.05f, 0.05f)
         };
-
-        if (PlayerPrefs.GetInt("UseAvatar",0) == 1){
+        int avatarConfig = PlayerPrefs.GetInt("UseAvatar",0);
+        if (avatarConfig == 1){
             Debug.Log("1,Avatar");
             characterModule.SetActive(true);
             leftHand.SetActive(false);
@@ -68,17 +68,22 @@ public class MenuController : MonoBehaviour
         GameObject goldenKey = GameObject.Find("goldenKey");
         Debug.Log($"goldenKey {goldenKey}");
         if (goldenKey != null){
-            if (PlayerPrefs.GetInt("KeyLocation",0) == 0){
+            int keyLocation = PlayerPrefs.GetInt("KeyLocation",0);
+            if (keyLocation == 1){
+                Debug.Log($"{keyLocation}, position 1");
                 goldenKey.transform.position = positions[0].transform.position;
                 goldenKey.transform.rotation = positions[0].transform.rotation;
                 // goldenKey.transform.localScale = positions[0].transform.localScale;
                 // lastUsedLocomotion1 = true;
-                PlayerPrefs.SetInt("KeyLocation",1);
+                PlayerPrefs.SetInt("KeyLocation",0);
+                Debug.Log($"1 -> position: {PlayerPrefs.GetInt("KeyLocation",-1)}");   
             }else{
+                Debug.Log($"{keyLocation}, position 2");
                 goldenKey.transform.position = positions[1].transform.position;
                 goldenKey.transform.rotation = positions[1].transform.rotation;
                 // goldenKey.transform.localScale = positions[1].transform.localScale;
-                PlayerPrefs.SetInt("KeyLocation",0);
+                PlayerPrefs.SetInt("KeyLocation",1);
+                Debug.Log($"2/? -> position: {PlayerPrefs.GetInt("KeyLocation",-1)}");   
                 // lastUsedLocomotion1 = true;
             }
         }else{
@@ -113,15 +118,17 @@ public class MenuController : MonoBehaviour
 
         if (UnityEngine.Random.value < 0.5f)
         {
-            PlayerPrefs.SetInt("KeyLocation",0);
+            PlayerPrefs.SetInt("KeyLocation",1);
+            Debug.Log($"position: {PlayerPrefs.GetInt("KeyLocation",-1)}");   
         }
         else
         {
-            PlayerPrefs.SetInt("KeyLocation",1);
+            PlayerPrefs.SetInt("KeyLocation",0);
         }
 
         if (UnityEngine.Random.value < 0.5f){
             PlayerPrefs.SetInt("UseAvatar",1);
+            Debug.Log($"position: {PlayerPrefs.GetInt("KeyLocation",-1)}");   
         }else{
             PlayerPrefs.SetInt("UseAvatar",0);
         }
