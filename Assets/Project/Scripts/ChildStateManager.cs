@@ -35,20 +35,4 @@ public class ChildStateManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    private void OnEnable()
-    {
-        // After the scene reloads, check the saved active child
-        // int activeChild = PlayerPrefs.GetInt("ActiveChild", 0); // Default to child2
-
-        // if (activeChild == 1)
-        // {
-        //     child1.SetActive(true);
-        //     child2.SetActive(false);
-        // }
-        // else
-        // {
-        //     child1.SetActive(false);
-        //     child2.SetActive(true);
-        // }
-    }
 }

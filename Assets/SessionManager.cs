@@ -10,7 +10,7 @@ public class SessionManager : MonoBehaviour
     public TimerScript timerScript;
 
     private void Start()
-    {
+    {        
         string timestamp = DateTime.Now.ToString("MM-dd-yy_H-mm-ss");
         string fileName = $"session_data{timestamp}.csv";
         filePath = Path.Combine(Application.persistentDataPath, fileName);

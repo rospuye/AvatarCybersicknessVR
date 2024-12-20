@@ -303,14 +303,14 @@ RectTransform:
   m_GameObject: {fileID: 26428623}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.010000001, y: 0.010000001, z: 0.010000001}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 747567353}
+  m_Father: {fileID: 1838672238}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.8999996, y: 24.74997}
+  m_AnchoredPosition: {x: 0, y: 0.25499725}
   m_SizeDelta: {x: 250, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &26428625
@@ -1021,6 +1021,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1420968797}
+        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
+        m_MethodName: cleanPlayerRefs
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 982910265}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -1568,7 +1580,6 @@ RectTransform:
   m_Children:
   - {fileID: 947811222}
   - {fileID: 2124799153}
-  - {fileID: 26428624}
   m_Father: {fileID: 1837302272}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -3360,6 +3371,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38053ee5e9b464db2b76bcd1b04d5bab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
+  characterModule: {fileID: 0}
+  positions: []
 --- !u!1 &1515231176
 GameObject:
   m_ObjectHideFlags: 0
@@ -3997,6 +4012,7 @@ Transform:
   m_LocalScale: {x: 1000, y: 1000, z: 1000}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 26428624}
   - {fileID: 975530113}
   m_Father: {fileID: 5076391718713241485}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4734,7 +4750,19 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1420968797}
         m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
-        m_MethodName: StartBttn
+        m_MethodName: SeatedStartBttn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1420968797}
+        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
+        m_MethodName: OnSceneLoaded
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
