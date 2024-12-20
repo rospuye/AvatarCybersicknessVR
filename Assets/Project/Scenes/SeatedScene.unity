@@ -1131,6 +1131,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 17.14
       objectReference: {fileID: 0}
+    - target: {fileID: 9161078357424480592, guid: aa59a23fec914b04f88d5384f8ebcf76, type: 3}
+      propertyPath: endScreen
+      value: 
+      objectReference: {fileID: 1127964357}
     m_RemovedComponents:
     - {fileID: 2769575115690964890, guid: aa59a23fec914b04f88d5384f8ebcf76, type: 3}
     m_RemovedGameObjects:
@@ -2326,6 +2330,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2623522582573075245, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
+      propertyPath: m_SmoothTurnEnabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2623522582573075245, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
+      propertyPath: m_NearFarEnableTeleportDuringNearInteraction
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2935555933436921606, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
+      propertyPath: m_SmoothMotionEnabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2935555933436921606, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
+      propertyPath: m_NearFarEnableTeleportDuringNearInteraction
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9017833988178113097, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.46

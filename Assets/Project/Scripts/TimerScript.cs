@@ -7,15 +7,19 @@ using TMPro;
 public class TimerScript : MonoBehaviour
 {
 
+    public GameObject endScreen;
     public float timeRemaining = 120; // Set time in seconds (2 minutes)
     public bool timerIsRunning;
     public TMP_Text TimerText; // Corrected type for TextMeshPro
     
+    private Transform userCamera;
+
     void Start()
     {
         timerIsRunning = true;
         DisplayTime(timeRemaining);
         InvokeRepeating("CallFunction", 1f, 1f);
+        userCamera = Camera.main.transform;
     }
 
     void CallFunction()
@@ -50,6 +54,9 @@ public class TimerScript : MonoBehaviour
 
     void StopFunction()
     {
+        if (endScreen!=null && userCamera != null){
+            endScreen.SetActive(true);
+        }
         CancelInvoke("CallFunction");
     }
 }
