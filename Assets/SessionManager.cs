@@ -11,14 +11,18 @@ public class SessionManager : MonoBehaviour
 
     private void Start()
     {        
-        string timestamp = DateTime.Now.ToString("MM-dd-yy_H-mm-ss");
-        string fileName = $"session_data{timestamp}.csv";
-        filePath = Path.Combine(Application.persistentDataPath, fileName);
-
-        File.AppendAllText(filePath, "MOVEMENT_DATA\n");
-        File.AppendAllText(filePath, "Timestamp,MovementDeltaX,MovementDeltaY,MovementDeltaZ,TotalMovementDelta\n");
+        //string timestamp = DateTime.Now.ToString("MM-dd-yy_H-mm-ss");
+        //string fileName = $"session_data{timestamp}.csv";
+        string fileName = PlayerPrefs.GetString("UserFile", null);
         previousPosition = Camera.main.transform.position;
-        InvokeRepeating("SaveMovementData", 0f, 1f);
+
+        if (!string.IsNullOrEmpty(fileName))
+        {
+            filePath = Path.Combine(Application.persistentDataPath, fileName);
+            //File.AppendAllText(filePath, "MOVEMENT_DATA\n");
+            File.AppendAllText(filePath, "Timestamp,MovementDeltaX,MovementDeltaY,MovementDeltaZ,TotalMovementDelta\n");
+            InvokeRepeating("SaveMovementData", 0f, 1f);
+        }
     }
 
     private void SaveMovementData()
@@ -42,8 +46,7 @@ public class SessionManager : MonoBehaviour
 
         if (timerScript != null)
         {
-            File.AppendAllText(filePath, "TIMER_DATA\n");
-
+            //File.AppendAllText(filePath, "TIMER_DATA\n");
             float timeLeft = timerScript.timeRemaining;
             string timestamp = DateTime.Now.ToString();
             string remainingTimeData = $"TimerStopped,{timestamp},TimeLeft:{timeLeft}s\n";

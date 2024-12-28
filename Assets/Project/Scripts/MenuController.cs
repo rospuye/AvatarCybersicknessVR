@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.IO;
 
 public class MenuController : MonoBehaviour
 {
@@ -130,6 +131,18 @@ public class MenuController : MonoBehaviour
     public void SeatedStartBttn()
     {
         // SceneManager.sceneLoaded += OnSceneLoaded;
+
+        string userFile = PlayerPrefs.GetString("UserFile", null);
+        if (!string.IsNullOrEmpty(userFile))
+        {
+            Scene currentScene = SceneManager.GetActiveScene();
+            bool seated = currentScene.name == "SeatedScene";
+            bool avatar = PlayerPrefs.GetInt("UseAvatar", 0) == 1;
+
+            string scenarioIdentifyingData = $"SCENARIO_{(seated ? "seated_" : "walking_")}{(avatar ? "avatar" : "noavatar")}\n";
+            File.AppendAllText(userFile, scenarioIdentifyingData);
+        }
+
         SceneManager.LoadScene("SeatedScene");
     }
 
