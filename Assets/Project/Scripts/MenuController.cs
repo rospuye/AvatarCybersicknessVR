@@ -72,7 +72,7 @@ public class MenuController : MonoBehaviour
             // Update the TMP text to reflect avatar use and scenario type
             if (scenarioText != null)
             {
-                scenarioText.text = $"Scenario: Avatar + {scenarioType}\nPlease take off your headset and fill out the SSQ. Come back when you're ready and click the button below:";
+                scenarioText.text = $"Scenario: Avatar + {scenarioType}\n\nPlease take off your headset and fill out the SSQ. Come back when you're ready and click the button below:";
             }
 
 
@@ -86,7 +86,7 @@ public class MenuController : MonoBehaviour
 
             if (scenarioText != null)
             {
-                scenarioText.text = $"Scenario: No Avatar + {scenarioType}\nPlease take off your headset and fill out the SSQ. Come back when you're ready and click the button below:";
+                scenarioText.text = $"Scenario: No Avatar + {scenarioType}\n\nPlease take off your headset and fill out the SSQ. Come back when you're ready and click the button below:";
             }
         }
 
