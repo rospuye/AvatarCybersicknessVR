@@ -10295,6 +10295,22 @@ PrefabInstance:
       propertyPath: m_text
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8627039511203273044, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
+      propertyPath: m_margin.w
+      value: -13.436302
+      objectReference: {fileID: 0}
+    - target: {fileID: 8627039511203273044, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
+      propertyPath: m_margin.x
+      value: 48.514427
+      objectReference: {fileID: 0}
+    - target: {fileID: 8627039511203273044, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
+      propertyPath: m_margin.y
+      value: -2.902811
+      objectReference: {fileID: 0}
+    - target: {fileID: 8627039511203273044, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
+      propertyPath: m_margin.z
+      value: 50.748577
+      objectReference: {fileID: 0}
     - target: {fileID: 9017833988178113097, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
