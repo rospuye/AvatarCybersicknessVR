@@ -2857,6 +2857,10 @@ PrefabInstance:
       propertyPath: outputField
       value: 
       objectReference: {fileID: 621010531}
+    - target: {fileID: 3484128598961847050, guid: 02be27ab17ab3b14f954f65dc06dd738, type: 3}
+      propertyPath: autoCapsAtStart
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3484128598961847063, guid: 02be27ab17ab3b14f954f65dc06dd738, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
