@@ -1,25 +1,35 @@
 using System.IO;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
+using System;
 
 public class InputFieldHandler : MonoBehaviour
 {
     public TMP_InputField inputField;
     public static string fileName;
+    [SerializeField]
+    private Button enterButton;
 
-    public void OnEnterButtonClicked()
-    {
+    public void CheckInputValue(){
         string inputText = inputField.text;
 
-        if (!string.IsNullOrWhiteSpace(inputText))
-        {
-            fileName = inputText + ".csv";
-            Debug.Log("Filename set: " + fileName);
+        if (!string.IsNullOrWhiteSpace(inputText)){
+            enterButton.interactable = true;
         }
         else
         {
-            Debug.LogError("Input text is empty! Cannot set filename.");
+            enterButton.interactable = false;
+            // Debug.LogError("Input text is empty! Cannot set filename.");
         }
+        
+    }
+    public void OnEnterButtonClicked()
+    {
+        string inputText = inputField.text;
+        enterButton.interactable = true;
+        fileName = inputText + ".csv";
+        Debug.Log("Filename set: " + fileName);
     }
 
     public void OnIDConfirmation()
