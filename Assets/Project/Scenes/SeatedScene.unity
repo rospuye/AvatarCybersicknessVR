@@ -6967,6 +6967,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38053ee5e9b464db2b76bcd1b04d5bab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scenarioText: {fileID: 2087494886}
   leftHand: {fileID: 636163312}
   rightHand: {fileID: 636163311}
   characterModule: {fileID: 2084121334}
@@ -8240,8 +8241,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Please take off your headset and fill out the SSQ. Come back when you''re
-    ready and click the button below:'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8306,7 +8306,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 52.309418, y: 6.9614716, z: 51.69611, w: -44.44316}
+  m_margin: {x: 47.278305, y: -4.644703, z: 48.90237, w: -13.494949}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

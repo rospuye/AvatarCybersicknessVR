@@ -38,6 +38,12 @@ public class MenuController : MonoBehaviour
     private List<GameObject> positions;
     void Start()
     {
+        Scene currentScene = SceneManager.GetActiveScene();
+
+        // Distinguish between walking and seated scenarios
+        string scenarioType = currentScene.name == "SeatedScene" ? "Seated" : "Walking";
+
+
         Debug.Log("menucontroller start");
         // on the shelf, behind the books
         locomotion1 = new TransformData
@@ -63,10 +69,10 @@ public class MenuController : MonoBehaviour
             PlayerPrefs.SetInt("UseAvatar",0);
 
 
-            // Update the TMP text to reflect avatar use
+            // Update the TMP text to reflect avatar use and scenario type
             if (scenarioText != null)
             {
-                scenarioText.text = "Scenario: Avatar + Walking\nPlease take off your headset and fill out the SSQ. Come back when you're ready and click the button below:";
+                scenarioText.text = $"Scenario: Avatar + {scenarioType}\nPlease take off your headset and fill out the SSQ. Come back when you're ready and click the button below:";
             }
 
 
@@ -77,9 +83,10 @@ public class MenuController : MonoBehaviour
             leftHand.SetActive(true);
             rightHand.SetActive(true);
             PlayerPrefs.SetInt("UseAvatar",1);
+
             if (scenarioText != null)
             {
-                scenarioText.text = "Scenario: No Avatar + Walking\nPlease take off your headset and fill out the SSQ. Come back when you're ready and click the button below:";
+                scenarioText.text = $"Scenario: No Avatar + {scenarioType}\nPlease take off your headset and fill out the SSQ. Come back when you're ready and click the button below:";
             }
         }
 
