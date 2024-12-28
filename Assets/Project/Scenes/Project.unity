@@ -2648,6 +2648,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38053ee5e9b464db2b76bcd1b04d5bab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scenarioText: {fileID: 1719949135}
   leftHand: {fileID: 1626171486}
   rightHand: {fileID: 1684753150}
   characterModule: {fileID: 1451848479}
@@ -10258,18 +10259,41 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 505544589}
+    - target: {fileID: 2623522582573075245, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
+      propertyPath: m_TeleportInteractor
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2935555933436921606, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
+      propertyPath: m_TeleportInteractor
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3331053753319761692, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1218349613}
+    - target: {fileID: 3398257493897448966, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
+      propertyPath: m_RayInteractors.Array.data[1].m_Interactor
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3398257493897448966, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
+      propertyPath: m_RayInteractors.Array.data[3].m_Interactor
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4957356842165132125, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6836696712315245518, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
+      propertyPath: m_AimTargetObject
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8355134221912432104, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
+      propertyPath: m_AimTargetObject
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8627039511203273044, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
       propertyPath: m_text
-      value: 'Please take off your headset and fill out the SSQ. Come back when you''re
-        ready and click the button below:'
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 9017833988178113097, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10323,9 +10347,6 @@ PrefabInstance:
     - {fileID: 7706413957357774691, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
     - {fileID: 2276356404326124220, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 7483673774669318421, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1733762922}
     - targetCorrespondingSourceObject: {fileID: 8480098870955182759, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1179691338}
@@ -10334,11 +10355,17 @@ PrefabInstance:
       addedObject: {fileID: 1723339497}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
---- !u!224 &1719949135 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 7483673774669318421, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
+--- !u!114 &1719949135 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8627039511203273044, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
   m_PrefabInstance: {fileID: 1719949134}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1723339496
 GameObject:
   m_ObjectHideFlags: 0
@@ -10726,143 +10753,6 @@ MonoBehaviour:
   m_SwapMaterials: 0
   m_BaseLineMaterial: {fileID: 0}
   m_EmptyHitMaterial: {fileID: 0}
---- !u!1 &1733762921
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1733762922}
-  - component: {fileID: 1733762924}
-  - component: {fileID: 1733762923}
-  m_Layer: 5
-  m_Name: Trial Signifier
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1733762922
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1733762921}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1719949135}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.9, y: 16.7}
-  m_SizeDelta: {x: 250, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1733762923
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1733762921}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: 'Please take off your headset and fill out the SSQ. Come back when you''re
-    ready and click the button below:'
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 10
-  m_fontSizeBase: 10
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_TextWrappingMode: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_EmojiFallbackSupport: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 52.309418, y: 6.9614716, z: 51.69611, w: -44.44316}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &1733762924
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1733762921}
-  m_CullTransparentMesh: 1
 --- !u!1001 &1752415846
 PrefabInstance:
   m_ObjectHideFlags: 0

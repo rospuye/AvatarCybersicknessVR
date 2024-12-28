@@ -1,10 +1,14 @@
 using System;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
+
+    public TMP_Text scenarioText;
+
     [Serializable]
     public struct TransformData
     {
@@ -57,12 +61,26 @@ public class MenuController : MonoBehaviour
             leftHand.SetActive(false);
             rightHand.SetActive(false);
             PlayerPrefs.SetInt("UseAvatar",0);
-        }else{
+
+
+            // Update the TMP text to reflect avatar use
+            if (scenarioText != null)
+            {
+                scenarioText.text = "Scenario: Avatar + Walking\nPlease take off your headset and fill out the SSQ. Come back when you're ready and click the button below:";
+            }
+
+
+        }
+        else{
             Debug.Log("2.Hands");
             characterModule.SetActive(false);
             leftHand.SetActive(true);
             rightHand.SetActive(true);
             PlayerPrefs.SetInt("UseAvatar",1);
+            if (scenarioText != null)
+            {
+                scenarioText.text = "Scenario: No Avatar + Walking\nPlease take off your headset and fill out the SSQ. Come back when you're ready and click the button below:";
+            }
         }
 
         GameObject goldenKey = GameObject.Find("goldenKey");
