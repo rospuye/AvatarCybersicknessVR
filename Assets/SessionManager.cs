@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SessionManager : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class SessionManager : MonoBehaviour
     public TimerScript timerScript;
 
     private void Start()
-    {        
+    {
         //string timestamp = DateTime.Now.ToString("MM-dd-yy_H-mm-ss");
         //string fileName = $"session_data{timestamp}.csv";
         string fileName = PlayerPrefs.GetString("UserFile", null);
@@ -18,6 +19,13 @@ public class SessionManager : MonoBehaviour
 
         if (!string.IsNullOrEmpty(fileName))
         {
+            Scene currentScene = SceneManager.GetActiveScene();
+            bool seated = currentScene.name == "SeatedScene";
+            bool avatar = PlayerPrefs.GetInt("UseAvatar", 0) == 1;
+
+            string scenarioIdentifyingData = $"SCENARIO_{(seated ? "seated_" : "walking_")}{(avatar ? "avatar" : "noavatar")}\n";
+            File.AppendAllText(fileName, scenarioIdentifyingData);
+
             filePath = Path.Combine(Application.persistentDataPath, fileName);
             //File.AppendAllText(filePath, "MOVEMENT_DATA\n");
             File.AppendAllText(filePath, "Timestamp,MovementDeltaX,MovementDeltaY,MovementDeltaZ,TotalMovementDelta\n");
