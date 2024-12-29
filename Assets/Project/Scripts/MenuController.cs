@@ -132,16 +132,16 @@ public class MenuController : MonoBehaviour
     {
         // SceneManager.sceneLoaded += OnSceneLoaded;
 
-        string userFile = PlayerPrefs.GetString("UserFile", null);
-        if (!string.IsNullOrEmpty(userFile))
-        {
-            Scene currentScene = SceneManager.GetActiveScene();
-            bool seated = currentScene.name == "SeatedScene";
-            bool avatar = PlayerPrefs.GetInt("UseAvatar", 0) == 1;
+        //string userFile = PlayerPrefs.GetString("UserFile", null);
+        //if (!string.IsNullOrEmpty(userFile))
+        //{
+        //    Scene currentScene = SceneManager.GetActiveScene();
+        //    bool seated = currentScene.name == "SeatedScene";
+        //    bool avatar = PlayerPrefs.GetInt("UseAvatar", 0) == 1;
 
-            string scenarioIdentifyingData = $"SCENARIO_{(seated ? "seated_" : "walking_")}{(avatar ? "avatar" : "noavatar")}\n";
-            File.AppendAllText(userFile, scenarioIdentifyingData);
-        }
+        //    string scenarioIdentifyingData = $"SCENARIO_{(seated ? "seated_" : "walking_")}{(avatar ? "avatar" : "noavatar")}\n";
+        //    File.AppendAllText(userFile, scenarioIdentifyingData);
+        //}
 
         SceneManager.LoadScene("SeatedScene");
     }
