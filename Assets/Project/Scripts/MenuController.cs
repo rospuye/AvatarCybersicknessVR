@@ -109,7 +109,7 @@ public class MenuController : MonoBehaviour
                 goldenKey.transform.rotation = positions[1].transform.rotation;
                 // goldenKey.transform.localScale = positions[1].transform.localScale;
                 PlayerPrefs.SetInt("KeyLocation",1);
-                Debug.Log($"2/? -> position: {PlayerPrefs.GetInt("KeyLocation",-1)}");   
+                Debug.Log($"0 -> position: {PlayerPrefs.GetInt("KeyLocation",-1)}");   
                 // lastUsedLocomotion1 = true;
             }
         }else{
@@ -157,7 +157,6 @@ public class MenuController : MonoBehaviour
         if (UnityEngine.Random.value < 0.5f)
         {
             PlayerPrefs.SetInt("KeyLocation",1);
-            Debug.Log($"position: {PlayerPrefs.GetInt("KeyLocation",-1)}");   
         }
         else
         {
@@ -166,7 +165,6 @@ public class MenuController : MonoBehaviour
 
         if (UnityEngine.Random.value < 0.5f){
             PlayerPrefs.SetInt("UseAvatar",1);
-            Debug.Log($"position: {PlayerPrefs.GetInt("KeyLocation",-1)}");   
         }else{
             PlayerPrefs.SetInt("UseAvatar",0);
         }
