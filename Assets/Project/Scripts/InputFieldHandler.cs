@@ -45,6 +45,6 @@ public class InputFieldHandler : MonoBehaviour
         File.WriteAllText(filePath, csvContent);
 
         Debug.Log("CSV file created: " + filePath);
-        PlayerPrefs.SetString("UserFile",fileName);
+        PlayerPrefs.SetString("UserFile", fileName);
     }
 }
