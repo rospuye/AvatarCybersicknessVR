@@ -23,8 +23,6 @@ public class MenuController : MonoBehaviour
     private TransformData static1;
     private TransformData static2;
 
-    private static bool? lastUsedLocomotion1 = null;
-
     [SerializeField]
     private GameObject leftHand;
     
@@ -33,7 +31,6 @@ public class MenuController : MonoBehaviour
 
     [SerializeField]
     private GameObject characterModule;
-    private bool usedAvatar = false;
     
     [SerializeField]
     private List<GameObject> positions;
