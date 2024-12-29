@@ -40,6 +40,7 @@ public class InputFieldHandler : MonoBehaviour
             return;
         }
 
+        PlayerPrefs.DeleteAll();
         string filePath = Path.Combine(Application.persistentDataPath, fileName);
         string csvContent = "";
         File.WriteAllText(filePath, csvContent);
