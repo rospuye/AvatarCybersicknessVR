@@ -2696,8 +2696,8 @@ MonoBehaviour:
   rightHand: {fileID: 1684753150}
   characterModule: {fileID: 1451848479}
   positions:
+  - {fileID: 2083683979}
   - {fileID: 828606480}
-  - {fileID: 1336402802}
 --- !u!114 &505544590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8095,7 +8095,7 @@ Transform:
   m_GameObject: {fileID: 1336402802}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.265, y: 36.956, z: -18.62}
+  m_LocalPosition: {x: 17.53, y: 38.96, z: -3.33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10308,9 +10308,45 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1218349613}
+    - target: {fileID: 4025305206289943691, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
+      propertyPath: m_text
+      value: END
+      objectReference: {fileID: 0}
     - target: {fileID: 4957356842165132125, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6175424618346451061, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7846303419433354017, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
+      propertyPath: m_text
+      value: NEXT TRIAL
+      objectReference: {fileID: 0}
+    - target: {fileID: 8627039511203273044, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
+      propertyPath: m_text
+      value: test
+      objectReference: {fileID: 0}
+    - target: {fileID: 8627039511203273044, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
+      propertyPath: m_fontSize
+      value: 8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8627039511203273044, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
+      propertyPath: m_margin.x
+      value: 55.58394
+      objectReference: {fileID: 0}
+    - target: {fileID: 8627039511203273044, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
+      propertyPath: m_margin.y
+      value: 1.1439934
+      objectReference: {fileID: 0}
+    - target: {fileID: 8627039511203273044, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
+      propertyPath: m_margin.z
+      value: 57.34495
+      objectReference: {fileID: 0}
+    - target: {fileID: 8627039511203273044, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 8.5
       objectReference: {fileID: 0}
     - target: {fileID: 9017833988178113097, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
       propertyPath: m_LocalPosition.x
