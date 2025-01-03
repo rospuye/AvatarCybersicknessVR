@@ -2696,8 +2696,8 @@ MonoBehaviour:
   rightHand: {fileID: 1684753150}
   characterModule: {fileID: 1451848479}
   positions:
-  - {fileID: 383521864}
-  - {fileID: 1852508899}
+  - {fileID: 828606480}
+  - {fileID: 1336402802}
 --- !u!114 &505544590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4610,7 +4610,7 @@ Transform:
   m_GameObject: {fileID: 828606480}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.67, y: 39.612, z: -30.015}
+  m_LocalPosition: {x: 4.67, y: 37.772, z: -30.015}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8095,7 +8095,7 @@ Transform:
   m_GameObject: {fileID: 1336402802}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.305, y: 36.956, z: -18.245}
+  m_LocalPosition: {x: 17.265, y: 36.956, z: -18.62}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10284,10 +10284,34 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 505544589}
+    - target: {fileID: 2757528310515108447, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3248917bce8cf554caeac63bfba8ef10, type: 3}
+    - target: {fileID: 2757528310515108447, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
+      propertyPath: m_Color.a
+      value: 0.99215686
+      objectReference: {fileID: 0}
+    - target: {fileID: 2757528310515108447, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2757528310515108447, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2757528310515108447, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3331053753319761692, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1218349613}
+    - target: {fileID: 4957356842165132125, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9017833988178113097, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -10410,11 +10434,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6944690376907584679, guid: 8289c22237e94c441abdab4817cc175e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.597
+      value: 2.91
       objectReference: {fileID: 0}
     - target: {fileID: 6944690376907584679, guid: 8289c22237e94c441abdab4817cc175e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10.288
+      value: 10.4
       objectReference: {fileID: 0}
     - target: {fileID: 6944690376907584679, guid: 8289c22237e94c441abdab4817cc175e, type: 3}
       propertyPath: m_LocalRotation.w

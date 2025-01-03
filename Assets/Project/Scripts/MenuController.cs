@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.IO;
+using UnityEngine.Analytics;
 
 public class MenuController : MonoBehaviour
 {
@@ -37,6 +38,10 @@ public class MenuController : MonoBehaviour
     void Start()
     {
         Scene currentScene = SceneManager.GetActiveScene();
+
+        if (currentScene.name == "Menu"){
+            return;
+        }
 
         // Distinguish between walking and seated scenarios
         string scenarioType = currentScene.name == "SeatedScene" ? "Seated" : "Walking";

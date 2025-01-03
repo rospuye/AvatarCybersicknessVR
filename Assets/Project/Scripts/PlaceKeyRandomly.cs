@@ -11,6 +11,10 @@ public class PlaceKeyRandomly : MonoBehaviour
     [Header("Target Object")]
     public GameObject targetObject;
 
+    // Bounds for respawning
+    private const float minBound = -100f;
+    private const float maxBound = 100f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +28,14 @@ public class PlaceKeyRandomly : MonoBehaviour
         }
     }
 
+    void Update()
+    {
+        if (targetObject != null)
+        {
+            CheckBoundsAndRespawn();
+        }
+    }
+
     void SetRandomPosition()
     {
         float randomX = Random.Range(x_start, x_end);
@@ -31,5 +43,18 @@ public class PlaceKeyRandomly : MonoBehaviour
 
         Vector3 newPosition = new Vector3(randomX, targetObject.transform.position.y, randomZ);
         targetObject.transform.position = newPosition;
+    }
+
+    void CheckBoundsAndRespawn()
+    {
+        Vector3 position = targetObject.transform.position;
+
+        if (position.x < minBound || position.x > maxBound ||
+            position.y < minBound || position.y > maxBound ||
+            position.z < minBound || position.z > maxBound)
+        {
+            Debug.Log("Target object out of bounds. Respawning at a random position.");
+            SetRandomPosition();
+        }
     }
 }
