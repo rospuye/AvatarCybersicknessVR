@@ -1423,7 +1423,7 @@ PrefabInstance:
     - target: {fileID: 9161078357424480592, guid: aa59a23fec914b04f88d5384f8ebcf76, type: 3}
       propertyPath: endScreen
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 798922514}
     m_RemovedComponents:
     - {fileID: 2769575115690964890, guid: aa59a23fec914b04f88d5384f8ebcf76, type: 3}
     - {fileID: 6742666670506189508, guid: aa59a23fec914b04f88d5384f8ebcf76, type: 3}
@@ -2626,6 +2626,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1279230096114844339, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
+      propertyPath: m_EnableFarCasting
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2623522582573075245, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
       propertyPath: m_SmoothTurnEnabled
       value: 0
@@ -2697,6 +2701,10 @@ PrefabInstance:
     - target: {fileID: 7846303419433354017, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
       propertyPath: m_text
       value: NEXT TRIAL
+      objectReference: {fileID: 0}
+    - target: {fileID: 8129064704253959212, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
+      propertyPath: m_EnableFarCasting
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8400845047921896489, guid: 8a6ca7dc3e8304d43844bd0ce5a76964, type: 3}
       propertyPath: m_IsActive
